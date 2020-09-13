@@ -27,3 +27,9 @@ type gallons float64
 
 type myType string
 type number int
+
+type date struct {
+	year  int
+	month int
+	day   int
+}

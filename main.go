@@ -237,4 +237,28 @@ func main() {
 	aNum.double()
 	fmt.Printf("number : %d\n", aNum)
 
+	fmt.Println("------------------------------------")
+	fmt.Println(" Date Struct ")
+	aDate := date{year: 2020, month: 9, day: 13}
+	fmt.Println(aDate)
+
+	aDate.setYear(1969)
+	aDate.setMonth(19)
+	aDate.setDay(69)
+	fmt.Println(aDate)
+
+	err = aDate.setYear(2034)
+	if err != nil {
+		log.Fatal(err)
+	}
+	err = aDate.setMonth(12)
+	if err != nil {
+		log.Fatal(err)
+	}
+	err = aDate.setDay(31)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println(aDate)
+
 }

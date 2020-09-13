@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
 
 func applyDiscount(s *subscriber) {
 	s.rate = 4.99
@@ -34,4 +37,29 @@ func (m myType) sayHi() {
 
 func (n *number) double() {
 	*n *= 2
+}
+
+// setter methods
+func (d *date) setYear(year int) error {
+	if year < 1 {
+		return errors.New("Invalid Year")
+	}
+	d.year = year
+	return nil
+}
+
+func (d *date) setMonth(month int) error {
+	if month < 1 || month > 12 {
+		return errors.New("Invalid month")
+	}
+	d.month = month
+	return nil
+}
+
+func (d *date) setDay(day int) error {
+	if day < 1 || day > 31 {
+		return errors.New("Invalid day")
+	}
+	d.day = day
+	return nil
 }
