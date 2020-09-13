@@ -63,3 +63,13 @@ func (d *date) setDay(day int) error {
 	d.day = day
 	return nil
 }
+
+// -----------------------------------
+// promoted methods
+func (e embeddedType) ExportedMethod() {
+	fmt.Println("Hi from, ExportedMethod on embeddedType")
+}
+
+func (e embeddedType) unexportedMethod() {
+	fmt.Println("Hi, from, unexported on embeddedType")
+}

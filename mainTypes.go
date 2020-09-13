@@ -33,3 +33,9 @@ type date struct {
 	month int
 	day   int
 }
+
+type myType2 struct {
+	embeddedType
+}
+
+type embeddedType string

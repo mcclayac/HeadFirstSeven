@@ -261,4 +261,11 @@ func main() {
 	}
 	fmt.Println(aDate)
 
+	fmt.Println("------------------------------------")
+	fmt.Println("------------------------------------")
+	fmt.Println("------------------------------------")
+	fmt.Println(" Promted methods ")
+	value4 := myType2{}
+	value4.ExportedMethod()
+	value4.unexportedMethod()
 }
