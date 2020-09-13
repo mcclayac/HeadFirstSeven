@@ -21,3 +21,9 @@ type address struct {
 	state      string
 	postalCode string
 }
+
+type liters float64
+type gallons float64
+
+type myType string
+type number int

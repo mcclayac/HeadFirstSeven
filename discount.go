@@ -19,3 +19,19 @@ func defaultSubscriber(name string) *subscriber {
 	s.active = true
 	return &s
 }
+
+func toGallons(l liters) gallons {
+	return gallons(l * 0.264)
+}
+
+func toLiters(g gallons) liters {
+	return liters(g * 3.785)
+}
+
+func (m myType) sayHi() {
+	fmt.Println("say hi, ", m)
+}
+
+func (n *number) double() {
+	*n *= 2
+}

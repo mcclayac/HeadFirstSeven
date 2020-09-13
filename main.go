@@ -172,4 +172,69 @@ func main() {
 	tonyEmployee.state = "FL"
 	tonyEmployee.postalCode = "34684"
 	fmt.Printf("Full Tony Employee 2\n%v\n\n", tonyEmployee)
+
+	fmt.Println("------------------------------------")
+	fmt.Println("------------------------------------")
+	fmt.Println(" Car and Bus Fuel")
+	var carFuel gallons
+	var busFuel liters
+	carFuel = gallons(10.0)
+	busFuel = liters(240.0)
+	fmt.Printf("Car Fuel : %.2f\n", carFuel)
+	fmt.Printf("Bus Fuel : %0.2f\n\n", busFuel)
+
+	fmt.Println("------------------------------------")
+	fmt.Println(" Car 2 and Bus 2 Fuel")
+	// Short Definitions
+	carFuel2 := gallons(5.55)
+	busFuel2 := liters(440.0)
+	fmt.Printf("Car Fuel 2: %.2f\n", carFuel2)
+	fmt.Printf("Bus Fuel 2: %0.2f\n\n", busFuel2)
+
+	fmt.Println("------------------------------------")
+	fmt.Println(" Car 3 and Bus 3 Fuel")
+	// Addinid structures
+	carFuel3 := carFuel + carFuel2
+	busFuel3 := busFuel + busFuel2
+	fmt.Printf("Car Fuel 3: %.2f\n", carFuel3)
+	fmt.Printf("Bus Fuel 3: %0.2f\n\n", busFuel3)
+
+	// . These are current errors
+	// carFuel4 := gallons(1.2)
+	// busFuel4 := liters(2.5)
+	// carFuel5 := gallons(8.0)
+	// busFuel5 := liters(30.0)
+
+	fmt.Println("------------------------------------")
+	fmt.Println(" Car 4 and Bus 4 Fuel")
+	carFuel4 := gallons(1.2)
+	busFuel4 := liters(4.5)
+	carFuel4 += toGallons(liters(40.0))
+	busFuel4 += toLiters(gallons(30.0))
+	fmt.Printf("Car Fuel 4: %.2f\n", carFuel4)
+	fmt.Printf("Bus Fuel 4: %0.2f\n\n", busFuel4)
+
+	fmt.Println("------------------------------------")
+	fmt.Println(" Method type ")
+	value2 := myType("Lisa McClay")
+	value2.sayHi()
+
+	value3 := myType("Angelo McClay")
+	value3.sayHi()
+
+	fmt.Println("------------------------------------")
+	fmt.Println(" number double ")
+	aNum := number(4)
+	fmt.Printf("number : %d\n", aNum)
+	aNum.double()
+	fmt.Printf("number : %d\n", aNum)
+	aNum.double()
+	fmt.Printf("number : %d\n", aNum)
+	aNum.double()
+	fmt.Printf("number : %d\n", aNum)
+	aNum.double()
+	fmt.Printf("number : %d\n", aNum)
+	aNum.double()
+	fmt.Printf("number : %d\n", aNum)
+
 }
